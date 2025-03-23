@@ -3,10 +3,9 @@ import Hero from "./components/Hero";
 import HotelListings from "./components/HotelListings";
 
 const App = () => {
-
   return (
     <>
-      <Navigation name="Manupa" />
+      <Navigation name="Delwo" />
       <div className="relative min-h-screen">
         <Hero />
         <img
