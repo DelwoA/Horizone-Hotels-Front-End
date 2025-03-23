@@ -5,7 +5,7 @@ const BACKEND_URL = "http://localhost:8000";
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `https://aidf-horizone-backend-delwoathauda.onrender.com/api/`,
+    baseUrl: `https://horizone-backend-delwoathauda.onrender.com/`,
     prepareHeaders: async (headers, { getState }) => {
       const token = await window?.Clerk?.session?.getToken();
       console.log(token);
