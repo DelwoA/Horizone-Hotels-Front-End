@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
-const BACKEND_URL = "https://aidf-horizone-backend-manupa.onrender.com";
+const BACKEND_URL = "http://localhost:8000";
 
 export const api = createApi({
   reducerPath: "api",
   baseQuery: fetchBaseQuery({
-    baseUrl: `${BACKEND_URL}/api/`,
+    baseUrl: `https://aidf-horizone-backend-delwoathauda.onrender.com/api/`,
     prepareHeaders: async (headers, { getState }) => {
       const token = await window?.Clerk?.session?.getToken();
       console.log(token);
@@ -14,6 +14,7 @@ export const api = createApi({
       }
     },
   }),
+
   endpoints: (builder) => ({
     getHotels: builder.query({
       query: () => "hotels",
